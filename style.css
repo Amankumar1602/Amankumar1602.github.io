@@ -1,12 +1,73 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: blanchedalmond;
+  text-align: center;
+  font-size: xx-larger;
+  height: 20%;
+  width: auto;
+}
+/* img{
+  height: 10vh;
+  width: 200px;
+} */
+h1{
+
+  color:rgb(26, 93, 151);
+  font-family: 'Festive', cursive;
+  /* font-family: 'Fuggles', cursive;
+  font-family: 'Tourney', cursive; */
+}
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: relative;
 }
 #canvas{
+  /* position: absolute;
+  left: 350px;
+  top: 242px; */
   border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  cursor: crosshair;
+  position: fixed;
 }
-.mynav {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.control{
+  /* display: flex; */
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  /* height: 100% ;
+  width: 100px; */
+  background-color:white;
+}
+.color-field{
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  margin: 2px;
+  border: 2px solid white;
+}
+.button{
+  /* margin: 10px;
+  padding: 10px; */
+}
+.size{
+  margin: 10px 0px;
+  padding-top: 10px 0px;
+}
+.actions{
+  margin: 10px 0px;
+  padding: 10px 0px;
+}
+#reset-canvas,save-canvas{
+  margin-right: 10px;
+}
+.color{
+  margin-top: 10px;
+  /* padding-top: 10px; */
 }
