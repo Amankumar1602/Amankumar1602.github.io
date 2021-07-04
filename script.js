@@ -15,6 +15,7 @@ window.addEventListener("load", () => {
   }
   function finishedPosition(){
     painting = false
+    ctx.beginPath();
   }
   function draw(e){
     if(!painting) return;
