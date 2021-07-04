@@ -1,11 +1,12 @@
 *{
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 header{
   background-color: blanchedalmond;
   text-align: center;
-  font-size: xx-larger;
+  font-size: x-large;
   height: 20%;
   width: auto;
 }
@@ -17,14 +18,15 @@ h1{
 
   color:rgb(26, 93, 151);
   font-family: 'Festive', cursive;
-  /* font-family: 'Fuggles', cursive;
-  font-family: 'Tourney', cursive; */
+  position: absolute;
+  right: 45%;
+  z-index: 5;
 }
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: relative;
+  /*position: relative;*/
 }
 #canvas{
   /* position: absolute;
@@ -43,7 +45,7 @@ body{
   top: 50px;
   /* height: 100% ;
   width: 100px; */
-  background-color:white;
+  background-color: unset;
 }
 .color-field{
   height: 35px;
@@ -57,12 +59,12 @@ body{
   padding: 10px; */
 }
 .size{
-  margin: 10px 0px;
-  padding-top: 10px 0px;
+  margin: 10px 0;
+  padding-top: 10px;
 }
 .actions{
-  margin: 10px 0px;
-  padding: 10px 0px;
+  margin: 10px 0;
+  padding: 10px 0;
 }
 #reset-canvas,save-canvas{
   margin-right: 10px;
