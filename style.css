@@ -6,3 +6,7 @@ body{
 #canvas{
   border: 2px solid black;
 }
+.mynav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
