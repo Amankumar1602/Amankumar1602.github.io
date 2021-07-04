@@ -1,8 +1,13 @@
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-#canvas{
+#canvas {
   border: 2px solid black;
+}
+
+.mynav {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
