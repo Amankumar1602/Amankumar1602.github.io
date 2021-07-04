@@ -9,6 +9,7 @@ const BLUE = 'blue'
 const GREEN = 'green'
 const YELLOW = 'yellow'
 const BLACK = 'black'
+const WHITE = 'white'
 
 // canvas sizing
 
@@ -63,6 +64,12 @@ const handleColorChange = evt => {
 	}
 }
 
+const eraser = (evt) => {
+	if (evt.key === 'e') {
+		lineColor = WHITE
+	}
+}
+
 //EventListeners
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
@@ -71,6 +78,7 @@ canvas.addEventListener('mousemove', draw);
 // respond to user input
 window.addEventListener('keypress', handleWidthChange)
 window.addEventListener("keypress", handleColorChange)
+window.addEventListener('keypress', eraser)
 
 // Resizing when screen length changes
 
