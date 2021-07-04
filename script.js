@@ -8,6 +8,7 @@ const RED = 'red'
 const BLUE = 'blue'
 const GREEN = 'green'
 const YELLOW = 'yellow'
+const BLACK = 'black'
 
 // canvas sizing
 
@@ -35,12 +36,43 @@ function draw(e) {
 	ctx.stroke();
 }
 
+const handleWidthChange = evt => {
+	if (evt.key === '+') {
+		lineWidth++
+	} else if (evt.key === '-') {
+		lineWidth--
+	}
+}
+
+const handleColorChange = evt => {
+	switch (evt.key) {
+		case '1':
+			lineColor = RED
+			break
+		case '2':
+			lineColor = BLUE
+			break
+		case '3':
+			lineColor = GREEN
+			break
+		case '4':
+			lineColor = YELLOW
+			break
+		case '5':
+			lineColor = BLACK
+	}
+}
+
 //EventListeners
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', draw);
 
-// Resizing when screen length changes 
+// respond to user input
+window.addEventListener('keypress', handleWidthChange)
+window.addEventListener("keypress", handleColorChange)
+
+// Resizing when screen length changes
 
 window.addEventListener('resize', () => {
 	canvas.height = window.innerHeight;
