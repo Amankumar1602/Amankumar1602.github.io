@@ -9,16 +9,11 @@ header{
   height: 20%;
   width: auto;
 }
-/* img{
-  height: 10vh;
-  width: 200px;
-} */
 h1{
-
+  
   color:rgb(26, 93, 151);
   font-family: 'Festive', cursive;
-  /* font-family: 'Fuggles', cursive;
-  font-family: 'Tourney', cursive; */
+
 }
 body{
   margin: 0;
@@ -44,14 +39,16 @@ body{
   top: 50px;
   /* height: 100% ;
   width: 100px; */
-  background-color:white;
+  background-color:lightseagreen;
+  border-radius: 15px;
 }
 .color-field{
-  height: 35px;
-  width: 35px;
+  height: 20px;
+  width: 20px;
   border-radius: 50px;
   margin: 2px;
-  border: 2px solid white;
+  border: 2px solid black;
+  padding-left: 20px;
 }
 /*.button{
   /* margin: 10px;
@@ -70,6 +67,24 @@ body{
 .color{
   margin-top: 10px;
   /* padding-top: 10px; */
+}
+.col{
+  border: lightblue;
+  border-radius: 10px;
+  background-color: lightgreen;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding:5px 0px 5px 20px;
+}
+.but{
+  font-size:10px;
+  background-color: lightslategrey;
+  border-radius: 7px;
+}
+#line{
+  background-color: lightslategrey;
+  border-radius: 5px;
+  width: auto;
 }
 
 .button {
