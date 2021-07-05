@@ -22,9 +22,6 @@ body{
   display: relative;
 }
 #canvas{
-  /* position: absolute;
-  left: 350px;
-  top: 242px; */
   border: 2px solid black;
   height: 100%;
   width: 100%;
@@ -32,12 +29,10 @@ body{
   position: fixed;
 }
 .control{
-  /* display: flex; */
+
   position: absolute;
    left: 10px; 
   top: 50px; 
-  /* height: 100% ;
-  width: 100px; */
   background-color:lightseagreen;
   border-radius: 15px;
 }
@@ -49,9 +44,6 @@ body{
   border: 2px solid black;
   padding-left: 20px;
 }
-/*.button{
-  /* margin: 10px;
-  padding: 10px; */
 .size{
   margin: 10px 0px;
   padding-top: 10px 0px;
@@ -65,7 +57,6 @@ body{
 }
 .color{
   margin-top: 10px;
-  /* padding-top: 10px; */
 }
 .col{
   border: lightblue;
