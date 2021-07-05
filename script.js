@@ -1,8 +1,9 @@
 window.addEventListener("load", () => {
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
-let lineWidth = 10
+let lineWidth = 5
 let lineColor = 'black'
+
 
 // colors for line
 const RED = 'red'
@@ -20,8 +21,9 @@ canvas.width = window.innerWidth;
 // variables
 let painting = false;
 
-function startPosition() {
+function startPosition(e) {
 	painting = true
+	draw(e);
 }
 
 function finishedPosition() {
@@ -33,9 +35,14 @@ function draw(e) {
 	if (!painting) return;
 	ctx.lineWidth = lineWidth;
 	ctx.lineCap = "round";
-	ctx.strokeStyle = lineColor
-	ctx.lineTo(e.clientX, e.clientY);
+	canvasX = e.pageX - canvas.offsetLeft;
+	canvasY = e.pageY - canvas.offsetTop;
+
+	ctx.strokeStyle = lineColor;
+	ctx.lineTo(canvasX, canvasY);
 	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(canvasX, canvasY);
 }
 
 const handleWidthChange = evt => {
@@ -70,6 +77,12 @@ const eraser = (evt) => {
 		lineColor = WHITE
 	}
 }
+const Pencil = (evt) => {
+	if (evt.key === 'p') {
+		lineColor = BLACK
+		lineWidth = 5
+	}
+}
 
 //EventListeners
 canvas.addEventListener('mousedown', startPosition);
@@ -80,6 +93,7 @@ canvas.addEventListener('mousemove', draw);
 window.addEventListener('keypress', handleWidthChange)
 window.addEventListener("keypress", handleColorChange)
 window.addEventListener('keypress', eraser)
+window.addEventListener('keypress', Pencil)
 
 // Resizing when screen length changes
 
