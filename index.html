@@ -53,37 +53,46 @@
       </label>
     </div>
 
-
+    <div class="actions" style="margin-left: 5px;">
+      <button id="line">Straight line<br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-lg"
+             viewBox="0 0 16 16">
+          <path d="M14.707 1.293a1 1 0 0 1 0 1.414l-12 12a1 1 0 0 1-1.414-1.414l12-12a1 1 0 0 1 1.414 0z"/>
+        </svg>
+        <i class="bi bi-slash-lg"></i></button>
+    </div>
   </div>
 
-  <div class="size">
-    <label for="pen-size">Pen Size</label>
-    <input type="range" id="pen-size" min="1" max="50" size="30px">
-  </div>
-  <div class="size">
-    <label for="eraser-size">Eraser Size</label>
-    <input type="range" id="eraser-size" min="1" max="50" size="30px">
-  </div>
+</div>
 
-  <section class="col">
-    <details open>
-      <summary>Color_Box</summary>
-      <div class="color-field" style="background-color: black;"></div>
-      <div class="color-field" style="background-color: red;"></div>
-      <div class="color-field" style="background-color:blue;"></div>
-      <div class="color-field" style="background-color: green;"></div>
-      <div class="color-field" style="background-color: yellow;"></div>
-    </details>
-  </section>
+<div class="size">
+  <label for="pen-size">Pen Size</label>
+  <input type="range" id="pen-size" min="1" max="50" size="30px">
+</div>
+<div class="size">
+  <label for="eraser-size">Eraser Size</label>
+  <input type="range" id="eraser-size" min="1" max="50" size="30px">
+</div>
 
-  <div class="color" style="margin-left: 10px;">
-    <label for="pen-color">Color</label>
-    <input type="color" style="font-size: 20px;" id="pen-color" value="#000">
-  </div>
-  <div class="actions" style="margin-left: 10px;">
-    <button id="reset-canvas">Reset</button>
-    <button id="save-canvas">Save</button>
-  </div>
+<section class="col">
+  <details open>
+    <summary>Color_Box</summary>
+    <div class="color-field" style="background-color: black;"></div>
+    <div class="color-field" style="background-color: red;"></div>
+    <div class="color-field" style="background-color:blue;"></div>
+    <div class="color-field" style="background-color: green;"></div>
+    <div class="color-field" style="background-color: yellow;"></div>
+  </details>
+</section>
+
+<div class="color" style="margin-left: 10px;">
+  <label for="pen-color">Color</label>
+  <input type="color" style="font-size: 20px;" id="pen-color" value="#000">
+</div>
+<div class="actions" style="margin-left: 10px;">
+  <button id="reset-canvas">Reset</button>
+  <button id="save-canvas">Save</button>
+</div>
 </div>
 </body>
 </html>
