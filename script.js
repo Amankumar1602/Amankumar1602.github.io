@@ -46,9 +46,14 @@ function draw(e) {
 	if (!painting) return;
 	ctx.lineWidth = lineWidth;
 	ctx.lineCap = "round";
-	ctx.strokeStyle = lineColor
-	ctx.lineTo(e.clientX, e.clientY);
+	canvasX = e.pageX - canvas.offsetLeft;
+	canvasY = e.pageY - canvas.offsetTop;
+
+	ctx.strokeStyle = lineColor;
+	ctx.lineTo(canvasX, canvasY);
 	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(canvasX, canvasY);
 }
 
 const handleWidthChange = evt => {

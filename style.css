@@ -1,6 +1,28 @@
 *{
   margin: 0;
   padding: 0;
+}
+header{
+  background-color: blanchedalmond;
+  text-align: center;
+  font-size: xx-large;
+  height: 20%;
+  width: auto;
+}
+/* img{
+  height: 10vh;
+  width: 200px;
+} */
+h1{
+
+  color:rgb(26, 93, 151);
+  font-family: 'Festive', cursive;
+  /* font-family: 'Fuggles', cursive;
+  font-family: 'Tourney', cursive; */
+}
+*{
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 header{
@@ -26,6 +48,7 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: relative;
   /*position: relative;*/
 }
 #canvas{
@@ -33,6 +56,19 @@ body{
   left: 350px;
   top: 242px; */
   border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  cursor: crosshair;
+  position: fixed;
+}
+.control{
+  /* display: flex; */
+  /*position: absolute;*/
+   left: 10px;
+  top: 50px;
+  /* height: 100% ;
+  width: 100px; */
+  background-color:white;
   height: 100%;
   width: 100%;
   cursor: crosshair;
@@ -54,10 +90,9 @@ body{
   margin: 2px;
   border: 2px solid white;
 }
-.button{
+/*.button{
   /* margin: 10px;
   padding: 10px; */
-}
 .size{
   margin: 10px 0;
   padding-top: 10px;
