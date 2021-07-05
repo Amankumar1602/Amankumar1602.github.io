@@ -5,7 +5,6 @@ const penSize = document.querySelector('#pen-size')
 const eraserSize = document.querySelector('#eraser-size')
 const penColor = document.querySelector('#pen-color')
 const resetBtn = document.querySelector('#reset-canvas')
-const saveBtn = document.querySelector('#save-canvas')
 const backgroundColors = document.querySelectorAll('.color-field')
 
 const radioBtns = document.querySelectorAll('input[name="pen-type"]')
@@ -63,7 +62,7 @@ const handleColorChange = () => {
 	lineColor = penColor.value
 }
 
-const handleEraserWidth = (evt) => {
+const handleEraserWidth = () => {
 	lineWidth = eraserSize.value
 }
 
