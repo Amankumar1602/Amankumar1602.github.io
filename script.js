@@ -103,6 +103,7 @@ const changeBackground = (evt) => {
 
 const clearScreen = () => {
 	ctx.clearRect(0,0, canvas.width, canvas.height)
+	eraserColor = 'white'
 }
 
 // EventListeners to draw a line
