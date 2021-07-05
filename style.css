@@ -5,7 +5,7 @@
 header{
   background-color: blanchedalmond;
   text-align: center;
-  font-size: xx-large;
+  font-size: x-large;
   height: 20%;
   width: auto;
 }
@@ -20,36 +20,12 @@ h1{
   /* font-family: 'Fuggles', cursive;
   font-family: 'Tourney', cursive; */
 }
-*{
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-header{
-  background-color: blanchedalmond;
-  text-align: center;
-  font-size: x-large;
-  height: 20%;
-  width: auto;
-}
-/* img{
-  height: 10vh;
-  width: 200px;
-} */
-h1{
-
-  color:rgb(26, 93, 151);
-  font-family: 'Festive', cursive;
-  position: absolute;
-  right: 45%;
-  z-index: 5;
-}
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   display: relative;
-  /*position: relative;*/
+  overflow: hidden;
 }
 #canvas{
   /* position: absolute;
@@ -63,25 +39,12 @@ body{
 }
 .control{
   /* display: flex; */
-  /*position: absolute;*/
-   left: 10px;
-  top: 50px;
-  /* height: 100% ;
-  width: 100px; */
-  background-color:white;
-  height: 100%;
-  width: 100%;
-  cursor: crosshair;
-  position: fixed;
-}
-.control{
-  /* display: flex; */
   position: absolute;
   left: 10px;
   top: 50px;
   /* height: 100% ;
   width: 100px; */
-  background-color: unset;
+  background-color:white;
 }
 .color-field{
   height: 35px;
@@ -107,4 +70,9 @@ body{
 .color{
   margin-top: 10px;
   /* padding-top: 10px; */
+}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
 }
