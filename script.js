@@ -1,7 +1,21 @@
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
+
+const penSize = document.querySelector('#pen-size')
+const eraserSize = document.querySelector('#eraser-size')
+const penColor = document.querySelector('#pen-color')
+const resetBtn = document.querySelector('#reset-canvas')
+const saveBtn = document.querySelector('#save-canvas')
+
+
 let lineWidth = 10
+let eraserWidth = 10
 let lineColor = 'black'
+const eraserColor = 'white'
+
+penSize.value = lineWidth
+eraserSize.value = lineWidth
+penColor.value = 'black'
 
 // colors for line
 const RED = 'red'
@@ -38,47 +52,31 @@ function draw(e) {
 }
 
 const handleWidthChange = evt => {
-	if (evt.key === '+') {
-		lineWidth++
-	} else if (evt.key === '-') {
-		lineWidth--
+	if (evt.target.id === 'eraser-size') {
+		eraserWidth = parseInt(evt.target.value)
+	} else if (evt.target.id === 'pen-size') {
+		lineWidth = parseInt(evt.target.value)
 	}
 }
 
-const handleColorChange = evt => {
-	switch (evt.key) {
-		case '1':
-			lineColor = RED
-			break
-		case '2':
-			lineColor = BLUE
-			break
-		case '3':
-			lineColor = GREEN
-			break
-		case '4':
-			lineColor = YELLOW
-			break
-		case '5':
-			lineColor = BLACK
-	}
+const handleColorChange = () => {
+	lineColor = penColor.value
 }
 
-const eraser = (evt) => {
-	if (evt.key === 'e') {
-		lineColor = WHITE
-	}
+const handleEraserWidth = (evt) => {
+	lineWidth = eraserSize.value
 }
 
-//EventListeners
+// EventListeners to draw a line
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', draw);
 
 // respond to user input
-window.addEventListener('keypress', handleWidthChange)
-window.addEventListener("keypress", handleColorChange)
-window.addEventListener('keypress', eraser)
+penSize.addEventListener('input', handleWidthChange)
+eraserSize.addEventListener('input', handleWidthChange)
+penColor.addEventListener("input", handleColorChange)
+eraserSize.addEventListener('input', handleEraserWidth)
 
 // Resizing when screen length changes
 
