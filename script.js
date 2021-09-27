@@ -97,12 +97,12 @@ const handleRadioInput = () => {
 
 const changeBackground = (evt) => {
 	ctx.fillStyle = evt.target.style.backgroundColor
-	ctx.fillRect(0, 0, canvas.width, canvas.height)
+	ctx.fillRect(0,0, canvas.width, canvas.height)
 	eraserColor = evt.target.style.backgroundColor
 }
 
 const clearScreen = () => {
-	ctx.clearRect(0, 0, canvas.width, canvas.height)
+	ctx.clearRect(0,0, canvas.width, canvas.height)
 	eraserColor = 'white'
 }
 
@@ -138,7 +138,7 @@ window.addEventListener('resize', () => {
 	canvas.width = window.innerWidth;
 });
 
-saveBtn.addEventListener("click", function (ev) {
+saveBtn.addEventListener("click", function(ev) {
 	saveBtn.href = canvas.toDataURL();
 	saveBtn.download = "mypainting.png";
 }, false);
