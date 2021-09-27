@@ -76,3 +76,9 @@ body{
   border-radius: 5px;
   width: auto;
 }
+#save-canvas{
+  color: blue;
+  background-color: white;
+  padding: 1px;
+  text-decoration: none;
+}
